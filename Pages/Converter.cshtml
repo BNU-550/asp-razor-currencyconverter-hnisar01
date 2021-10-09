@@ -1,0 +1,29 @@
+﻿@page
+@model RazorCurrencyConverter.Pages.ConverterModel
+@{
+}
+
+<div style="background-color:aqua">
+    <header class="text-center">
+        <h1 class="display-4">Currency Converter Razor Page</h1>
+        <h2>By HassanNisar</h2>
+    </header>
+    <br /><br />
+    <form method="post" class="mx-auto" style="width:200px">
+        <p class="col-sm-2">
+            <label for="amount">Amount(£)</label>
+            <input type="text" required="true" 
+                   placeholder="Please enter the amount you want converted" 
+                   asp-for="Value">
+        </p>
+        
+        <p class="col-sm-2">
+            <button type="submit" class="btn btn-primary">
+                Calculate
+            </button>
+        </p>
+        <p class="col-sm-12">
+            @ViewData["Message"]
+        </p>
+    </form>
+</div>
